@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>まーらいおん | Web Developer / Video Creator</title>
+  <meta name="description" content="Web制作・動画編集を学びながら、使いやすいサイト制作を目指す「まーらいおん」のポートフォリオサイトです。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ヘッダー / ナビゲーション -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#top" class="nav__logo">まーらいおん</a>
+      <button class="nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#top" class="nav__link">Top</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#works" class="nav__link">Works</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ① トップページ -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <div class="hero__avatar">
+          <img src="https://placehold.jp/200x200.png" alt="まーらいおんのプロフィール写真" width="160" height="160" loading="eager">
+        </div>
+        <p class="hero__eyebrow">Web Developer / Video Creator</p>
+        <h1 class="hero__name">まーらいおん</h1>
+        <p class="hero__catch">Web制作 × 動画編集で、伝わる体験をつくる。</p>
+        <p class="hero__desc">
+          Web制作・動画編集を学びながら、使いやすいサイト制作を目指しています。
+        </p>
+        <div class="hero__actions">
+          <a href="#works" class="btn btn--primary">制作実績を見る</a>
+          <a href="#contact" class="btn btn--outline">お問い合わせ</a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="次のセクションへスクロール">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ② プロフィール -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title">
+          <span class="section__title-en">About</span>
+          <span class="section__title-ja">プロフィール</span>
+        </h2>
+
+        <div class="about">
+          <div class="about__text">
+            <p>
+              はじめまして、まーらいおんです。<br>
+              Web制作と動画編集を軸に、日々スキルを磨いています。
+              「見やすさ・使いやすさ」を大切にしながら、
+              初心者目線を忘れないものづくりを心がけています。
+            </p>
+            <p>
+              現在はHTML / CSS / JavaScriptを中心に学習しながら、
+              実績としてホームページ制作やYouTube動画編集にも取り組んでいます。
+            </p>
+          </div>
+
+          <div class="about__tools">
+            <h3 class="about__subtitle">使用ツール</h3>
+            <ul class="tool-list">
+              <li class="tool-list__item">
+                <span class="tool-list__icon" aria-hidden="true">🌐</span>
+                <span>HTML</span>
+              </li>
+              <li class="tool-list__item">
+                <span class="tool-list__icon" aria-hidden="true">🎨</span>
+                <span>CSS</span>
+              </li>
+              <li class="tool-list__item">
+                <span class="tool-list__icon" aria-hidden="true">⚡</span>
+                <span>JavaScript</span>
+              </li>
+              <li class="tool-list__item">
+                <span class="tool-list__icon" aria-hidden="true">💻</span>
+                <span>VS Code</span>
+              </li>
+              <li class="tool-list__item">
+                <span class="tool-list__icon" aria-hidden="true">🐙</span>
+                <span>GitHub</span>
+              </li>
+              <li class="tool-list__item">
+                <span class="tool-list__icon" aria-hidden="true">🎬</span>
+                <span>Adobe Premiere Pro</span>
+              </li>
+              <li class="tool-list__item">
+                <span class="tool-list__icon" aria-hidden="true">🎥</span>
+                <span>OBS</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 制作実績 -->
+    <section class="section section--alt" id="works">
+      <div class="container">
+        <h2 class="section__title">
+          <span class="section__title-en">Works</span>
+          <span class="section__title-ja">制作実績</span>
+        </h2>
+
+        <div class="works-grid">
+          <article class="work-card">
+            <div class="work-card__thumb">
+              <img src="https://placehold.jp/400x240.png?text=整骨院HP" alt="整骨院ホームページのサムネイル" loading="lazy">
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Web制作</p>
+              <h3 class="work-card__title">整骨院ホームページ</h3>
+              <p class="work-card__desc">
+                実店舗の整骨院様向けに制作したコーポレートサイト。
+                レスポンシブ対応・予約導線を意識した設計。
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a href="#" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                サイトを見る <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__thumb">
+              <img src="https://placehold.jp/400x240.png?text=YouTube" alt="YouTubeゲーム実況チャンネルのサムネイル" loading="lazy">
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">動画編集</p>
+              <h3 class="work-card__title">YouTubeゲーム実況チャンネル</h3>
+              <p class="work-card__desc">
+                Premiere ProとOBSを使用したゲーム実況動画の企画・撮影・編集。
+                テロップ・BGM構成にもこだわりました。
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">Premiere Pro</span>
+                <span class="tag">OBS</span>
+              </div>
+              <a href="#" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                チャンネルを見る <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__thumb">
+              <img src="https://placehold.jp/400x240.png?text=JavaScript" alt="JavaScript作品のサムネイル" loading="lazy">
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Web制作</p>
+              <h3 class="work-card__title">JavaScript作品</h3>
+              <p class="work-card__desc">
+                DOM操作やイベント処理を学びながら制作したミニアプリ。
+                実践を通してロジックの組み立て方を習得中です。
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <a href="#" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                コードを見る <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="work-card work-card--soon">
+            <div class="work-card__thumb work-card__thumb--placeholder">
+              <span>Coming Soon</span>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">アプリ開発</p>
+              <h3 class="work-card__title">Flutterアプリ</h3>
+              <p class="work-card__desc">
+                現在学習中。今後モバイルアプリ開発の実績を追加予定です。
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__thumb">
+              <img src="https://placehold.jp/400x240.png?text=GitHub" alt="GitHub公開コードのサムネイル" loading="lazy">
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Web制作</p>
+              <h3 class="work-card__title">GitHub公開コード</h3>
+              <p class="work-card__desc">
+                学習過程で作成したコードをGitHubにて公開しています。
+                継続的なコミットを心がけています。
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+              </div>
+              <a href="#" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                GitHubを見る <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ スキル -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title">
+          <span class="section__title-en">Skills</span>
+          <span class="section__title-ja">スキル</span>
+        </h2>
+
+        <ul class="skills-list">
+          <li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">HTML</span>
+              <span class="skill-item__stars" aria-label="5段階中4">★★★★☆</span>
+            </div>
+            <div class="skill-item__bar">
+              <div class="skill-item__bar-fill" style="--percent: 80%;"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">CSS</span>
+              <span class="skill-item__stars" aria-label="5段階中4">★★★★☆</span>
+            </div>
+            <div class="skill-item__bar">
+              <div class="skill-item__bar-fill" style="--percent: 80%;"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">JavaScript</span>
+　　　　　　<li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">JavaScript</span>
+              <span class="skill-item__stars" aria-label="5段階中2">★★☆☆☆</span>
+            </div>
+            <div class="skill-item__bar">
+              <div class="skill-item__bar-fill" style="--percent: 40%;"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">Premiere Pro</span>
+              <span class="skill-item__stars" aria-label="5段階中5">★★★★★</span>
+            </div>
+            <div class="skill-item__bar">
+              <div class="skill-item__bar-fill" style="--percent: 100%;"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">OBS</span>
+              <span class="skill-item__stars" aria-label="5段階中4">★★★★☆</span>
+            </div>
+            <div class="skill-item__bar">
+              <div class="skill-item__bar-fill" style="--percent: 80%;"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">Git</span>
+              <span class="skill-item__stars" aria-label="5段階中3">★★★☆☆</span>
+            </div>
+            <div class="skill-item__bar">
+              <div class="skill-item__bar-fill" style="--percent: 60%;"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-item__header">
+              <span class="skill-item__name">GitHub</span>
+              <span class="skill-item__stars" aria-label="5段階中3">★★★☆☆</span>
+            </div>
+            <div class="skill-item__bar">
+              <div class="skill-item__bar-fill" style="--percent: 60%;"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 学習ロードマップ -->
+    <section class="section section--alt" id="roadmap">
+      <div class="container">
+        <h2 class="section__title">
+          <span class="section__title-en">Roadmap</span>
+          <span class="section__title-ja">学習ロードマップ</span>
+        </h2>
+
+        <ol class="roadmap">
+          <li class="roadmap__item is-done">
+            <div class="roadmap__marker">1</div>
+            <div class="roadmap__content">
+              <h3 class="roadmap__title">HTML・CSS</h3>
+              <p class="roadmap__desc">基礎的なマークアップとスタイリングを習得。</p>
+            </div>
+          </li>
+          <li class="roadmap__item is-done">
+            <div class="roadmap__marker">2</div>
+            <div class="roadmap__content">
+              <h3 class="roadmap__title">JavaScript</h3>
+              <p class="roadmap__desc">DOM操作・イベント処理などを学習中。</p>
+            </div>
+          </li>
+          <li class="roadmap__item is-current">
+            <div class="roadmap__marker">3</div>
+            <div class="roadmap__content">
+              <h3 class="roadmap__title">ポートフォリオ制作</h3>
+              <p class="roadmap__desc">これまでの学習成果を実績としてまとめる。</p>
+            </div>
+          </li>
+          <li class="roadmap__item">
+            <div class="roadmap__marker">4</div>
+            <div class="roadmap__content">
+              <h3 class="roadmap__title">React または Flutter</h3>
+              <p class="roadmap__desc">より実践的なフレームワークの学習へ。</p>
+            </div>
+          </li>
+          <li class="roadmap__item">
+            <div class="roadmap__marker">5</div>
+            <div class="roadmap__content">
+              <h3 class="roadmap__title">オリジナルアプリ開発</h3>
+              <p class="roadmap__desc">学んだ技術を活かしたオリジナル開発へ挑戦。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ⑤ お問い合わせ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section__title">
+          <span class="section__title-en">Contact</span>
+          <span class="section__title-ja">お問い合わせ</span>
+        </h2>
+
+        <p class="contact__lead">
+          お仕事のご依頼・ご質問などお気軽にご連絡ください。
+        </p>
+
+        <ul class="contact-list">
+          <li class="contact-list__item">
+            <a href="mailto:example@example.com" class="contact-list__link">
+              <span class="contact-list__icon" aria-hidden="true">✉️</span>
+              <span class="contact-list__label">Email</span>
+            </a>
+          </li>
+          <li class="contact-list__item">
+            <a href="#" class="contact-list__link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-list__icon" aria-hidden="true">🐦</span>
+              <span class="contact-list__label">X (Twitter)</span>
+            </a>
+          </li>
+          <li class="contact-list__item">
+            <a href="#" class="contact-list__link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-list__icon" aria-hidden="true">🐙</span>
+              <span class="contact-list__label">GitHub</span>
+            </a>
+          </li>
+          <li class="contact-list__item">
+            <a href="#" class="contact-list__link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-list__icon" aria-hidden="true">▶️</span>
+              <span class="contact-list__label">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p class="footer__text">&copy; <span id="year"></span> まーらいおん. All Rights Reserved.</p>
+      <a href="#top" class="footer__totop" aria-label="トップへ戻る">↑ TOP</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+/* ==========================================================================
+   Reset & Base
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Custom Properties
+   ========================================================================== */
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-accent: #f97316;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8fafc;
+  --color-border: #e5e7eb;
+  --max-width: 1120px;
+  --header-height: 72px;
+  --transition-base: 0.3s ease;
+}
+
+/* ==========================================================================
+   Layout Helpers
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.section {
+  padding-block: 96px;
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section__title-en {
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section__title-ja {
+  font-size: 2.8rem;
+  font-weight: 900;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.section__title-ja::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 48px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Header / Navigation
+   ========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.header.is-scrolled {
+  border-bottom-color: var(--color-border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav__logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.nav__menu {
+  display: flex;
+  gap: 32px;
+}
+
+.nav__link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 32px;
+  height: 24px;
+  z-index: 1001;
+}
+
+.nav__toggle-bar {
+  display: block;
+  width: 100%;
+  height: 2px
