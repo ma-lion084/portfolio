@@ -258,15 +258,12 @@
           </li>
 
           <li class="skill-item">
-            <div class="skill-item__header">
-              <span class="skill-item__name">JavaScript</span>
-　　　　　　<li class="skill-item">
-            <div class="skill-item__header">
-              <span class="skill-item__name">JavaScript</span>
-              <span class="skill-item__stars" aria-label="5段階中2">★★☆☆☆</span>
+  　　　　　　<div class="skill-item__header"> 
+             <span class="skill-item__name">JavaScript</span>
+             <span class="skill-item__stars" aria-label="5段階中2">★★☆☆☆</span>
             </div>
             <div class="skill-item__bar">
-              <div class="skill-item__bar-fill" style="--percent: 40%;"></div>
+             <div class="skill-item__bar-fill" style="--percent: 40%;"></div>
             </div>
           </li>
 
@@ -428,6 +425,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
   font-size: 62.5%;
 }
 
@@ -644,10 +642,6 @@ button {
 .nav__toggle-bar {
   display: block;
   width: 100%;
-  height: 2px
-.nav__toggle-bar {
-  display: block;
-  width: 100%;
   height: 2px;
   background: var(--color-text);
   border-radius: 2px;
@@ -845,6 +839,17 @@ button {
   transition: var(--transition-base);
 }
 
+.roadmap__item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.work-card.is-visible,
+.roadmap__item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .work-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
@@ -1075,3 +1080,329 @@ button {
 }
 
 /* ==========================================================================
+   Contact
+   ========================================================================== */
+.contact__lead {
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contact-list__item {
+  flex: 0 1 200px;
+}
+
+.contact-list__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 28px 16px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: var(--transition-base);
+}
+
+.contact-list__link:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.contact-list__icon {
+  font-size: 3.2rem;
+}
+
+.contact-list__label {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background: var(--color-text);
+  color: #fff;
+  padding-block: 32px;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer__text {
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+.footer__totop {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  transition: var(--transition-base);
+}
+
+.footer__totop:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* ==========================================================================
+   Scroll Reveal（JSで .is-visible を付与）
+   ========================================================================== */
+.js-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 64px;
+  }
+
+  .section__title-ja {
+    font-size: 2.4rem;
+  }
+
+  /* --- モバイルナビゲーション --- */
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__menu {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+  }
+
+  .nav__menu.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav__link {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .hero__avatar img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap::before {
+    left: 19px;
+  }
+
+  .roadmap__marker {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .tool-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Accessibility: アニメーション低減設定への配慮
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/**
+ * ポートフォリオサイト共通スクリプト
+ * - モバイルナビ開閉
+ * - ヘッダーのスクロール時スタイル切替
+ * - スキルバー / 要素のスクロール表示アニメーション
+ * - フッター年号の自動更新
+ */
+(() => {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+   * モバイルナビゲーション
+   * ------------------------------------------------------------------ */
+  const initMobileNav = () => {
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    if (!toggle || !menu) return;
+
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'メニューを開く');
+      document.body.style.overflow = '';
+    };
+
+    const openMenu = () => {
+      menu.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'メニューを閉じる');
+      document.body.style.overflow = 'hidden'; // 背景スクロール防止
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.contains('is-open');
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    // メニュー内リンクをクリックしたら閉じる
+    menu.querySelectorAll('.nav__link').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Escキーで閉じる
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  };
+
+  /* ------------------------------------------------------------------
+   * ヘッダー：スクロール時に影を付与
+   * ------------------------------------------------------------------ */
+  const initHeaderScroll = () => {
+    const header = document.getElementById('header');
+    if (!header) return;
+
+    const onScroll = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // 初期状態の反映
+  };
+
+  /* ------------------------------------------------------------------
+   * スクロール表示アニメーション（IntersectionObserver）
+   * スキルバー・セクション要素などに .is-visible を付与
+   * ------------------------------------------------------------------ */
+  const initScrollReveal = () => {
+    const targets = document.querySelectorAll(
+      '.skill-item, .work-card, .roadmap__item, .js-reveal'
+    );
+    if (targets.length === 0) return;
+
+    // IntersectionObserver 非対応環境ではすべて表示
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target); // 一度表示したら監視解除
+          }
+        });
+      },
+      {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.2,
+      }
+    );
+
+    targets.forEach((el) => observer.observe(el));
+  };
+
+  /* ------------------------------------------------------------------
+   * フッターの年号を自動更新
+   * ------------------------------------------------------------------ */
+  const initFooterYear = () => {
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  };
+
+  /* ------------------------------------------------------------------
+   * 初期化
+   * ------------------------------------------------------------------ */
+  document.addEventListener('DOMContentLoaded', () => {
+    initMobileNav();
+    initHeaderScroll();
+    initScrollReveal();
+    initFooterYear();
+  });
+})();
